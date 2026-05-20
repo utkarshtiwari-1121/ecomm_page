@@ -1,10 +1,256 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand&display=swap");
 
+$font-lato: "Lato", sans-serif;
+$font-quicksand: "Quicksand", sans-serif;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+$padding_body: 0 5rem;
+
+$font-body: 16px;
+$font-small: 15px;
+$font-very-small: 13px;
+$font-heading: 50px;
+$font-subheading: 35px;
+$font-subsubheading: 26px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.hero_section {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  //   padding: $padding_body;
+
+  header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: $font-lato;
+    font-weight: 300;
+    padding: $padding_body;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: $font-small;
+    border-bottom: 1px solid #e0e0e0;
+
+    .header_links-aboutus {
+      display: flex;
+      gap: 20px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .header_secure_delivery {
+      display: flex;
+    }
+    .header_need_help {
+      display: flex;
+      gap: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    select {
+      outline: none;
+      border: none;
+      font-weight: 300;
+      background-color: transparent;
+      font-size: $font-body;
+      font-family: $font-lato;
+    }
+  }
+
+  .header_logo_search_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: $padding_body;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    // gap: 0px;
+    // justify-content: space-between;
+
+    .header_logo_container {
+      display: flex;
+      justify-content: space-between;
+      width: 55%;
+
+      .logo_image {
+        width: 200px;
+        height: auto;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+      //   align-items: center;
+      //   gap: 10px;
+    }
+
+    .header_search_container {
+      display: flex;
+      align-items: center;
+      width: 70%;
+      .search_container {
+        display: flex;
+        // gap: 10px;
+        justify-content: space-between;
+        // border: 1px solid red;
+        padding: 15px;
+
+        border: 3px solid #bce3c9;
+        border-radius: 5px;
+        width: 100%;
+        select {
+          border: none;
+          border-right: 1px solid #cacaca;
+
+          //   outline: none;
+          font-weight: 300;
+          background-color: transparent;
+          font-size: $font-small;
+          font-family: $font-quicksand;
+        }
+        input {
+          border: none;
+          outline: none;
+          font-weight: 300;
+          background-color: transparent;
+          font-size: $font-small;
+          font-family: $font-lato;
+          //   flex: 1;
+          //   width: 100%;
+        }
+        button {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          font-size: $font-small;
+          font-family: $font-lato;
+        }
+        .input_search {
+          //   display: flex;
+          //   width: 100%;
+          //   gap: 10px;
+          //   width: 100%;
+        }
+      }
+    }
+
+    .header_cart_container {
+      display: flex;
+      width: 40%;
+      justify-content: space-between;
+      align-items: center;
+      select {
+        border: none;
+        outline: none;
+        font-weight: 300;
+        background-color: transparent;
+        font-size: $font-small;
+        font-family: $font-quicksand;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: $font-small;
+        font-family: $font-quicksand;
+        font-weight: 300;
+      }
+
+      .location {
+        display: flex;
+        border: 1px solid #ddd6d68d;
+        border-radius: 5px;
+        padding: 5px 15px;
+        box-shadow: 4px 6px 6px 0px rgb(219, 213, 213);
+      }
+    }
+  }
+
+  .all_categories_container {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding_body;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    .all_categories_title {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      select {
+        border: none;
+        outline: none;
+        font-weight: 300;
+        background-color: transparent;
+        font-size: $font-small;
+        font-family: $font-quicksand;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: $font-small;
+        font-family: $font-lato;
+        font-weight: 300;
+      }
+      p {
+        font-size: $font-small;
+        font-family: $font-lato;
+        font-weight: 300;
+      }
+      .browse_all_categories {
+        border: 1px solid #3bb77e;
+        display: flex;
+        align-items: center;
+        background-color: #3bb77e;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        select {
+          color: white;
+        }
+        // gap: 10px;
+      }
+      .deals {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+    .contact_us_container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: $font-quicksand;
+      img {
+        width: 35px;
+        height: auto;
+      }
+      h2{
+        color: #3bb77e;
+        font-size: $font-subsubheading;
+        font-weight: 700;
+      }
+      p{
+        font-size: $font-very-small;
+        font-family: $font-quicksand;
+        font-weight: 300;
+
+      }
+    }
+  }
+}

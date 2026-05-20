@@ -3,15 +3,244 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="./index.css" />
     <!-- fonts quicksand -->
   </head>
   <body>
+    <section class="hero_section">
+      <header>
+        <div class="header_links-aboutus">
+          <a href="#">About Us</a>
+          <a href="#">my acount</a>
+          <a href="#">wishlist</a>
+          <a href="#">order tracking</a>
+        </div>
 
-    <header>
+        <div class="header_secure_delivery">
+          <p>100% Secure delivery without contacting the courier</p>
+        </div>
+        <div class="header_need_help">
+          <div>
+            <a href="tel:+919140568926"
+              >need help? Call Us:
+              <span style="color: #3bb77e">+1800 900</span></a
+            >
+          </div>
+          <div>
+            <select name="language" id="language">
+              <option value="en">English</option>
+              <option value="es">Hindi</option>
+              <option value="fr">Marathi</option>
+              <option value="de">Kannada</option>
+              <option value="it">Telugu</option>
+              <option value="pt">Tamil</option>
+              <option value="zh">Bengali</option>
+              <option value="ja">Punjabi</option>
+              <option value="ko">Malayalam</option>
+              <option value="ar">Odia</option>
+            </select>
+          </div>
+          <div>
+            <select name="currency" id="currency">
+              <option value="EUR">INR</option>
+              <option value="USD">USD</option>
+              <option value="GBP">GBP</option>
+              <option value="AUD">AUD</option>
+              <option value="NZD">NZD</option>
+              <option value="CAD">CAD</option>
+            </select>
+          </div>
+        </div>
+      </header>
 
-    </header>
+      <div class="header_logo_search_container">
+        <div class="header_logo_container">
+          <div class="logo_image">
+            <img src="img/logo.png" alt="logo" />
+          </div>
 
+          <div class="header_search_container">
+            <div class="search_container">
+              <div>
+                <select name="category" id="category">
+                  <option value="all">All</option>
+                  <option value="electronics">Electronics</option>
+                  <option value="clothing">Clothing</option>
+                  <option value="home">Home</option>
+                  <option value="beauty">Beauty</option>
+                  <option value="sports">Sports</option>
+                </select>
+                <input type="text" placeholder="Search for products..." />
+              </div>
 
+              <div>
+                <!-- <div class="input_search"> -->
+
+                <button type="submit" aria-label="Search">
+                  <svg
+                    width="20"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                    style="
+                      background: transparent;
+                      border: 0;
+                      outline: none;
+                      fill: currentColor;
+                    "
+                  >
+                    <path
+                      d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"
+                    />
+                  </svg>
+                </button>
+
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header_cart_container">
+          <div class="location">
+            <img src="img/location.png" alt="location" />
+            <select name="location" id="location">
+              <option value="Your Location">Your Location</option>
+              <option value="India">India</option>
+              <option value="United States">United States</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              <option value="New Zealand">New Zealand</option>
+            </select>
+          </div>
+
+          <div>
+            <img src="img/compare.png" alt="compare" />
+            <a href="#">Compare</a>
+          </div>
+
+          <div>
+            <img src="img/heart.png" alt="wishlist" />
+            <a href="#">Wishlist</a>
+          </div>
+
+          <div>
+            <img src="img/cart.png" alt="cart" />
+            <a href="#">Cart</a>
+          </div>
+
+          <div>
+            <img src="img/user profile.png" alt="user profile" />
+            <a href="#">My Account</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="all_categories_container">
+        <div class="all_categories_title">
+          <div class="browse_all_categories">
+            <img src="img/browseall.png" alt="browse all" />
+            <select name="all_categories" id="all_categories">
+              <option value="Browse All Categories">
+                Browse All Categories
+              </option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Home">Home</option>
+              <option value="Beauty">Beauty</option>
+              <option value="Sports">Sports</option>
+            </select>
+          </div>
+
+          <div class="deals">
+            <img src="img/fire.svg.png" alt="fire" />
+            <p>Deals</p>
+          </div>
+
+          <div>
+            <select name="home" id="home">
+            <option value="Home">Home</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Living Room">Living Room</option>
+            </select>
+          </div>
+
+          <div>
+            <a href="#">About</a>
+          </div>
+
+          <div>
+            <select name="Shop by" id="shop by">
+              <option value="Shop by">Shop by</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Home">Home</option>
+              <option value="Beauty">Beauty</option>
+              <option value="Sports">Sports</option>
+            </select>
+          </div>
+
+          <div>
+            <select name="vendors" id="vendors">
+              <option value="Vendors">Vendors</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Home">Home</option>
+              <option value="Beauty">Beauty</option>
+              <option value="Sports">Sports</option>
+            </select>
+          </div>
+
+          <div>
+            <select name="Mega Menu" id="mega menu">
+              <option value="Mega Menu">Mega Menu</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Office">Office</option>
+              <option value="Garden">Garden</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <select name="Blog" id="blog">
+              <option value="Blog">Blog</option>
+              <option value="Blog Category 1">Blog Category 1</option>
+              <option value="Blog Category 2">Blog Category 2</option>
+              <option value="Blog Category 3">Blog Category 3</option>
+              <option value="Blog Category 4">Blog Category 4</option>
+              <option value="Blog Category 5">Blog Category 5</option>
+            </select>
+          </div>
+
+          <div>
+            <select name="Pages" id="pages">
+              <option value="Pages">Pages</option>
+              <option value="Page 1">Page 1</option>
+              <option value="Page 2">Page 2</option>
+              <option value="Page 3">Page 3</option>
+              <option value="Page 4">Page 4</option>
+              <option value="Page 5">Page 5</option>
+            </select>
+          </div>
+
+          <div>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+
+        <div class="contact_us_container">
+          <div>
+            <img src="img/customercare.svg.png" alt="customer care" />
+          </div>
+          <div class="contact_us_content">
+            <h2>1900 - 888</h2>
+            <p>24/7 Support Center</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
