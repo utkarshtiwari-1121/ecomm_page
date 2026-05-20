@@ -160,9 +160,9 @@
 
           <div>
             <select name="home" id="home">
-            <option value="Home">Home</option>
-            <option value="Kitchen">Kitchen</option>
-            <option value="Living Room">Living Room</option>
+              <option value="Home">Home</option>
+              <option value="Kitchen">Kitchen</option>
+              <option value="Living Room">Living Room</option>
             </select>
           </div>
 
@@ -241,6 +241,76 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="products_main_container">
+      <div class="category_filter_container">
+        <div class="category_main_container">
+          <h2>Categories</h2>
+          <div class="category_list">
+            <div class="category_item">
+              <div>
+                <img src="img/milk.png" alt="category1" />
+                <p>Milk and Dairy</p>
+              </div>
+              <p>13</p>
+            </div>
+            <div class="category_item">
+              <div>
+                <img src="img/clothing.png" alt="category2" />
+                <p>Clothing</p>
+              </div>
+              <p>4</p>
+            </div>
+            <div class="category_item">
+              <div>
+                <img src="img/pet food.svg.png" alt="category3" />
+                <p>Pet Food</p>
+              </div>
+              <p>5</p>
+            </div>
+            <div class="category_item">
+              <div>
+                <img src="img/baking material.png" alt="category4" />
+                <p>Baking Material</p>
+              </div>
+              <p>8</p>
+            </div>
+            <div class="category_item">
+              <div>
+                <img src="img/fresh fruit.png" alt="category5" />
+                <p>Fresh Fruit</p>
+              </div>
+              <p>10</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="price_filter_container">
+          <div class="price_filter_item">Fill by price</div>
+          <div class="price_filter_range">
+            <label>From: <span>4400</span></label>
+            <input
+              type="range"
+              id="minPrice"
+              min="0"
+              max="90000"
+              value="4400"
+            />
+
+            <label>To: <span>69000</span></label>
+            <input
+              type="range"
+              id="maxPrice"
+              min="0"
+              max="90000"
+              value="69000"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="products_container"></div>
     </section>
   </body>
 </html>

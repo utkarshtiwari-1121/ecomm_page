@@ -22,6 +22,7 @@ $font-subsubheading: 26px;
 body {
   max-width: 1920px;
   margin: 0 auto;
+  font-family: $font-lato;
 }
 
 .hero_section {
@@ -240,17 +241,89 @@ body {
         width: 35px;
         height: auto;
       }
-      h2{
+      h2 {
         color: #3bb77e;
         font-size: $font-subsubheading;
         font-weight: 700;
       }
-      p{
+      p {
         font-size: $font-very-small;
         font-family: $font-quicksand;
         font-weight: 300;
-
       }
     }
+  }
+}
+
+.products_main_container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: 20px;
+  padding: $padding_body;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  .category_filter_container {
+    // border: 1px solid #e0e0e0;
+    width: fit-content;
+    border: 1px solid #e0e0e0;
+    box-shadow: 2px 5px 20px 0px rgb(219, 213, 213);
+    border-radius: 15px;
+
+    // border-radius: 5px;
+    padding: 1.5rem;
+    .category_list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .category_item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        padding: 10px 10px;
+        width: 16rem;
+        margin: 5px 0;
+        justify-content: space-between;
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        img {
+          width: 30px;
+          height: auto;
+        }
+      }
+
+    }
+    .category_main_container{
+        h2{
+            font-size: $font-subsubheading;
+            font-weight: 700;
+            // margin-bottom: 10px;
+            font-family: $font-quicksand;
+        }
+    }
+
+    .price_filter_container{
+
+
+        .price_filter_range{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
+  }
+  .products_container {
+    // border: 1px solid #e0e0e0;
+    // border-radius: 5px;
+    padding: 10px;
   }
 }

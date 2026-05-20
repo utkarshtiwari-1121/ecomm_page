@@ -9,6 +9,7 @@
 body {
   max-width: 1920px;
   margin: 0 auto;
+  font-family: "Lato", sans-serif;
 }
 
 .hero_section {
@@ -211,4 +212,58 @@ body {
   font-size: 13px;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
+}
+
+.products_main_container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: 20px;
+  padding: 0 5rem;
+}
+.products_main_container .category_filter_container {
+  width: fit-content;
+  border: 1px solid #e0e0e0;
+  box-shadow: 2px 5px 20px 0px rgb(219, 213, 213);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+.products_main_container .category_filter_container .category_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.products_main_container .category_filter_container .category_list .category_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 16rem;
+  margin: 5px 0;
+  justify-content: space-between;
+}
+.products_main_container .category_filter_container .category_list .category_item div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.products_main_container .category_filter_container .category_list .category_item img {
+  width: 30px;
+  height: auto;
+}
+.products_main_container .category_filter_container .category_main_container h2 {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+}
+.products_main_container .category_filter_container .price_filter_container .price_filter_range {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.products_main_container .products_container {
+  padding: 10px;
 }/*# sourceMappingURL=index.css.map */
