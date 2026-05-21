@@ -2,11 +2,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ecommerce Website</title>
     <link rel="stylesheet" href="./index.css" />
-    <!-- fonts quicksand -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
+
     <section class="hero_section">
       <header>
         <div class="header_links-aboutus">
@@ -244,73 +250,250 @@
     </section>
 
     <section class="products_main_container">
-      <div class="category_filter_container">
-        <div class="category_main_container">
-          <h2>Categories</h2>
-          <div class="category_list">
-            <div class="category_item">
-              <div>
-                <img src="img/milk.png" alt="category1" />
-                <p>Milk and Dairy</p>
+      <div class="filters_sidebar">
+        <div class="category_filter_container">
+          <div class="category_main_container">
+            <h2>Categories</h2>
+            <div class="category_list">
+              <div class="category_item">
+                <div>
+                  <img src="img/milk.png" alt="category1" />
+                  <p>Milk and Dairy</p>
+                </div>
+                <p>13</p>
               </div>
-              <p>13</p>
+              <div class="category_item">
+                <div>
+                  <img src="img/clothing.png" alt="category2" />
+                  <p>Clothing</p>
+                </div>
+                <p>4</p>
+              </div>
+              <div class="category_item">
+                <div>
+                  <img src="img/pet food.svg.png" alt="category3" />
+                  <p>Pet Food</p>
+                </div>
+                <p>5</p>
+              </div>
+              <div class="category_item">
+                <div>
+                  <img src="img/baking material.png" alt="category4" />
+                  <p>Baking Material</p>
+                </div>
+                <p>8</p>
+              </div>
+              <div class="category_item">
+                <div>
+                  <img src="img/fresh fruit.png" alt="category5" />
+                  <p>Fresh Fruit</p>
+                </div>
+                <p>10</p>
+              </div>
             </div>
-            <div class="category_item">
-              <div>
-                <img src="img/clothing.png" alt="category2" />
-                <p>Clothing</p>
-              </div>
-              <p>4</p>
+          </div>
+        </div>
+        <div class="price_filter_container">
+          <div class="price_filter_main_container">
+            <div class="price_filter_item">Fill by price</div>
+            <div class="price_filter_range">
+              <label>From: <span>6900</span></label>
+              <input
+                type="range"
+                id="minPrice"
+                min="0"
+                max="90000"
+                value="6900"
+              />
+
+              <label>To: <span>69000</span></label>
+              <input
+                type="range"
+                id="maxPrice"
+                min="0"
+                max="90000"
+                value="69000"
+              />
             </div>
-            <div class="category_item">
-              <div>
-                <img src="img/pet food.svg.png" alt="category3" />
-                <p>Pet Food</p>
+            <div class="color_filter_container">
+              <div class="color_filter_item">
+                <h4>Color</h4>
+
+                <form action="">
+                  <div>
+                    <input type="checkbox" id="red" name="red" value="red" />
+                    <label for="red"> Red</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="blue" name="blue" value="blue" />
+                    <label for="blue"> Blue</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="green"
+                      name="green"
+                      value="green"
+                    />
+                    <label for="green"> Green</label>
+                  </div>
+                </form>
               </div>
-              <p>5</p>
+
+              <div class="item_condition_filter_item">
+                <h4>Item condition</h4>
+
+                <form action="">
+                  <div>
+                    <input type="checkbox" id="new" name="new" value="new" />
+                    <label for="new"> New</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="used" name="used" value="used" />
+                    <label for="used"> Used</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="refurbished"
+                      name="refurbished"
+                      value="refurbished"
+                    />
+                    <label for="refurbished"> Refurbished</label>
+                  </div>
+                </form>
+              </div>
+
+              <div class="filter_button_container">
+                <button>
+                  <img src="img/filter_icon.png" alt="filter icon" />
+                  <p>Filter</p>
+                </button>
+              </div>
             </div>
-            <div class="category_item">
-              <div>
-                <img src="img/baking material.png" alt="category4" />
-                <p>Baking Material</p>
-              </div>
-              <p>8</p>
-            </div>
-            <div class="category_item">
-              <div>
-                <img src="img/fresh fruit.png" alt="category5" />
-                <p>Fresh Fruit</p>
-              </div>
-              <p>10</p>
+
+            <div class="fillbyprice_image">
+              <img src="img/fill by price.png" alt="fill by price image" />
             </div>
           </div>
         </div>
 
-        <div class="price_filter_container">
-          <div class="price_filter_item">Fill by price</div>
-          <div class="price_filter_range">
-            <label>From: <span>4400</span></label>
-            <input
-              type="range"
-              id="minPrice"
-              min="0"
-              max="90000"
-              value="4400"
-            />
+        <div class="new_products_main_container">
+          <div class="new_products_content_container">
+            <div class="new_products_item">New products</div>
+            <div class="newProducts_container">
+              <div class="product_one">
+                <div>
+                  <img src="img/chen cardigan.jpg" alt="chen cardigan" />
+                </div>
+                <div>
+                  <h4>Chen Cardigan</h4>
+                  <p>99rs</p>
+                  <svg
+                    width="9px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+                    />
+                  </svg>
+                </div>
+              </div>
 
-            <label>To: <span>69000</span></label>
-            <input
-              type="range"
-              id="maxPrice"
-              min="0"
-              max="90000"
-              value="69000"
-            />
+              <div class="product_one">
+                <div>
+                  <img src="img/chen sweater.jpg" alt="chen cardigan" />
+                </div>
+                <div>
+                  <h4>Chen Sweater</h4>
+                  <p>99rs</p>
+                  <svg
+                    width="9px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="product_one">
+                <div>
+                  <img src="img/colorful jacket.jpg" alt="chen cardigan" />
+                </div>
+                <div>
+                  <h4>Colorful Jacket</h4>
+                  <p>99rs</p>
+                  <svg
+                    width="9px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="products_container"></div>
+      <div class="products_container">
+        <div class="herobanner_slider">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="herobanner_content_container">
+                  <div class="herobanner_heading">
+                    <h1>Don’t miss amazing grocery deals</h1>
+
+                    <h2>Sign up for the daily newsletter</h2>
+                  </div>
+
+                  <div class="Subscribe">
+                    <svg
+                      width="15px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                      <path
+                        d="M290.5 287.7L491.4 86.9 359 456.3 290.5 287.7zM457.4 53L256.6 253.8 88 185.3 457.4 53zM38.1 216.8l205.8 83.6 83.6 205.8c5.3 13.1 18.1 21.7 32.3 21.7 14.7 0 27.8-9.2 32.8-23.1L570.6 8c3.5-9.8 1-20.6-6.3-28s-18.2-9.8-28-6.3L39.4 151.7c-13.9 5-23.1 18.1-23.1 32.8 0 14.2 8.6 27 21.7 32.3z"
+                      />
+                    </svg>
+                    <input type="email" placeholder="Your email address" />
+                    <button>Subscribe</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">Slide 2</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="product_category_main_container">
+          <div class="product_heading">
+            <h2>Popular Products</h2>
+          </div>
+          <div class="product_category_list">
+            <ul>
+              <li>All</li>
+              <li>milk and dairy</li>
+              <li>coffee and tea</li>
+              <li>pet food</li>
+              <li>meats</li>
+              <li>vegetables</li>
+              <li>fruits</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
