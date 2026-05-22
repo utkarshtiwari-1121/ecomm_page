@@ -577,7 +577,6 @@ body {
     flex-wrap: wrap;
     gap: 29px;
 
-
     .popular_products_cards {
       display: flex;
       flex-direction: column;
@@ -589,8 +588,8 @@ body {
       .popular_card_content {
         display: flex;
         flex-direction: column;
-        gap: .5rem;
-        .popular_products_cards_image{
+        gap: 0.5rem;
+        .popular_products_cards_image {
           width: 100%;
           height: auto;
           img {
@@ -602,7 +601,7 @@ body {
         }
       }
     }
-    .popular_card_category_rating{
+    .popular_card_category_rating {
       display: flex;
       justify-content: space-between;
     }
@@ -612,28 +611,28 @@ body {
     //     font-family: $font-lato;
     //     font-weight: 400;
     //   }
-      .popular_card_rating{
-        display: flex;
-        gap: 5px;
-        p{
-          font-size: $font-very-small;
-        }
+    .popular_card_rating {
+      display: flex;
+      gap: 5px;
+      p {
+        font-size: $font-very-small;
+      }
     }
 
-    .popular_card_price{
+    .popular_card_price {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .price{
+      .price {
         display: flex;
         gap: 15px;
-        .old-price{
+        .old-price {
           text-decoration: line-through;
           color: #7e7e7e;
           font-size: $font-very-small;
           font-weight: 300;
         }
-        .new-price{
+        .new-price {
           color: #3bb77e;
           font-weight: bolder;
           font-size: $font-body;
@@ -641,27 +640,27 @@ body {
       }
     }
 
-    .add_to_cart_button{
+    .add_to_cart_button {
       // display: flex;
-      button{
+      button {
         display: flex;
         gap: 5px;
         border: none;
         outline: none;
-        background-color: #DEF9EC;
+        background-color: #def9ec;
         color: #3bb77e;
         padding: 10px 20px;
         border-radius: 5px;
       }
     }
-    .category_name{
-      p{
+    .category_name {
+      p {
         font-size: $font-body;
         font-family: $font-quicksand;
         font-weight: bolder;
       }
     }
-    .popular_card_category{
+    .popular_card_category {
       font-size: $font-very-small;
       font-family: $font-lato;
       font-weight: 300;
