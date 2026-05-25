@@ -512,6 +512,7 @@ body {
   gap: 1rem;
   background-color: white;
   border: 1px solid #e0e0e0;
+  box-shadow: 1px 1px 12px 0px rgba(173, 173, 173, 0.4705882353);
   max-width: 16rem;
   border-radius: 15px;
   padding: 1rem;
@@ -571,12 +572,13 @@ body {
 }
 .products_main_container .products_container .deals_of_the_day_container .dod_shopnow {
   background-image: url(img/dod_image.png);
-  width: 27rem;
+  width: 27.5rem;
   aspect-ratio: 15.3/9;
   background-repeat: no-repeat;
   background-size: contain;
+  border-radius: 15px;
   display: flex;
-  padding: 3rem 5rem;
+  padding: 3rem 4rem;
 }
 .products_main_container .products_container .deals_of_the_day_container .dod_shopnow .dod_shopnow_content_container {
   max-width: 15rem;
@@ -586,7 +588,7 @@ body {
 }
 .products_main_container .products_container .deals_of_the_day_container .dod_shopnow .dod_shopnow_content_container h3 {
   font-family: "Quicksand", sans-serif;
-  font-size: 21px;
+  font-size: 23px;
   font-weight: bold;
 }
 .products_main_container .products_container .deals_of_the_day_container .dod_shopnow .dod_shopnow_content_container button {

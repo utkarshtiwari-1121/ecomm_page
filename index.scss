@@ -12,7 +12,7 @@ $font-very-small: 13px;
 $font-heading: 50px;
 $font-subheading: 30px;
 $font-subsubheading: 26px;
-$font-supersubheading: 21px;
+$font-supersubheading: 23px;
 
 * {
   margin: 0;
@@ -608,6 +608,8 @@ body {
         gap: 1rem;
         background-color: white;
         border: 1px solid #e0e0e0;
+        box-shadow: 1px 1px 12px 0px #adadad78;
+
         max-width: 16rem;
         border-radius: 15px;
         padding: 1rem;
@@ -667,12 +669,13 @@ body {
       }
       .dod_shopnow {
         background-image: url(img/dod_image.png);
-        width: 27rem;
+        width: 27.5rem;
         aspect-ratio: 15.3 / 9;
         background-repeat: no-repeat;
         background-size: contain;
+        border-radius: 15px;
         display: flex;
-        padding: 3rem 5rem;
+        padding: 3rem 4rem;
         .dod_shopnow_content_container {
           // border: 1px solid;
           max-width: 15rem;
@@ -751,6 +754,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 29px;
+      // box-shadow: 5px 10px #888888;
+
     justify-content: space-between;
 
     .popular_products_cards {
