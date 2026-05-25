@@ -753,7 +753,7 @@ body {
   .popular_products_cards_contianer {
     display: flex;
     flex-wrap: wrap;
-    gap: 29px;
+    gap: 25px;
     // box-shadow: 5px 10px #888888;
 
     justify-content: space-between;
@@ -946,7 +946,7 @@ body {
     .div {
       // border: 1px solid #8787871a;
       border-radius: 15px;
-      height: 150px;
+      // height: 150px;
       .new_products_content_container {
         display: flex;
         flex-direction: column;
@@ -1003,12 +1003,374 @@ body {
             }
           }
         }
-        .product_details_container{
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
+        .product_details_container {
+          display: flex;
+          gap: 1rem;
+          flex-direction: column;
         }
       }
+    }
+  }
+}
+
+.emailer {
+  max-width: 1920px;
+  margin: 3rem auto;
+  padding: $padding_body;
+  .emailer_container {
+    display: flex;
+    align-items: center;
+
+    padding: 6rem;
+    border: 2px solid #e0e0e0;
+    background-image: url(img/EMAILER_BG.png), url(img/EMAILER_BG_OVERLAY.png);
+    width: 100%;
+    height: 25rem;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right;
+    background-size: cover, contain;
+    border-radius: 15px;
+    .herobanner_content_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      flex-direction: column;
+
+      gap: 3rem;
+      align-items: flex-start;
+      max-width: 40rem;
+      .herobanner_heading {
+        text-align: left;
+        h1 {
+          font-size: $font-heading;
+          font-family: $font-quicksand;
+          line-height: 1;
+          font-weight: bolder;
+          color: #253d4e;
+        }
+        h2 {
+          font-size: $font-subheading;
+          font-family: $font-lato;
+          font-weight: 300;
+          padding-top: 1rem;
+          color: #7e7e7e;
+        }
+      }
+      .Subscribe {
+        // border: 1px solid #d53d3d;
+        border-radius: 2rem;
+        background-color: white;
+        // padding: 0px 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        svg {
+          margin-left: 1rem;
+          filter: opacity(0.5);
+        }
+        input {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          font-size: $font-small;
+          font-family: $font-lato;
+          font-weight: 300;
+        }
+        button {
+          border: none;
+          outline: none;
+          border-radius: 2rem;
+          background-color: #3bb77e;
+          padding: 15px 25px;
+          // background-color: transparent;
+          font-size: $font-small;
+          color: white;
+          font-family: $font-quicksand;
+        }
+      }
+    }
+  }
+}
+
+
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+.footer_section {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: $padding_body;
+  background-color: #fdfdfd; // Very light gray/white background
+  font-family: inherit;
+  color: #253d4e;
+  
+  /* --- Top Main Grid --- */
+  .footer_main_container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr 1.3fr;
+    gap: 20px;
+    padding-bottom: 3rem;
+    
+    .footer_col {
+      display: flex;
+      flex-direction: column;
+
+&.install {  // ✅ Also works since already in .footer_col
+  // display: flex;
+  // flex-direction: column;
+  gap: 15px;
+}
+      h3 {
+        font-family: $font-quicksand;
+        font-size: $font-subsubheading; // Or ~24px
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #253d4e;
+      }
+    }
+
+    /* Col 1: Logo and Info */
+    .footer_col_info {
+      .footer_logo {
+        margin-bottom: 1rem;
+        width: 150px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      
+      .footer_desc {
+        font-size: $font-small;
+        font-family: $font-lato;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+        color: #4f5d77;
+      }
+
+      .contact_info {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          font-size: $font-small;
+          font-family: $font-lato;
+          line-height: 1.5;
+          color: #4f5d77;
+
+          .icon {
+            width: 16px;
+            height: auto;
+            margin-top: 3px;
+          }
+
+          strong {
+            color: #253d4e;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    /* Cols 2-5: Links */
+    .footer_col_links {
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        li a {
+          text-decoration: none;
+          color: #4f5d77;
+          font-size: $font-small;
+          font-family: $font-lato;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #3bb77e;
+            padding-left: 5px; // Small hover animation
+          }
+        }
+      }
+    }
+
+    /* Col 6: App & Payment */
+    .footer_col_app {
+      .app_buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 2rem;
+
+        a img {
+          height: 40px; // Standard app store badge height
+          width: auto;
+          border-radius: 5px;
+        }
+      }
+
+      .secure_payment_text {
+        font-size: $font-small;
+        font-family: $font-lato;
+        color: #253d4e;
+        margin-bottom: 10px;
+      }
+
+      .payment_methods img {
+        height: 30px; // Adjust based on your payment placeholder
+        width: auto;
+      }
+    }
+  }
+
+  /* --- Bottom Bar --- */
+  .footer_bottom_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #bce3c9; // Thin green-tinted divider
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    /* Left */
+    .copyright_block {
+      p {
+        font-size: $font-small;
+        font-family: $font-lato;
+        color: #7e7e7e;
+        line-height: 1.6;
+
+        .brand_highlight {
+          color: #3bb77e;
+          font-weight: 700;
+        }
+      }
+    }
+
+    /* Center */
+    .support_phones_block {
+      display: flex;
+      gap: 3rem;
+
+      .phone_item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        img {
+          width: 35px;
+          height: auto;
+        }
+
+        .phone_text {
+          h4 {
+            color: #3bb77e;
+            font-size: $font-subsubheading; // ~26px
+            font-family: $font-quicksand;
+            font-weight: 700;
+            line-height: 1.1;
+          }
+          p {
+            font-size: $font-very-small;
+            font-family: $font-lato;
+            color: #7e7e7e;
+          }
+        }
+      }
+    }
+
+    /* Right */
+    .social_follow_block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+
+      .social_header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        h5 {
+          font-size: $font-body;
+          font-family: $font-quicksand;
+          font-weight: 700;
+          color: #253d4e;
+        }
+
+        .social_icons {
+          display: flex;
+          gap: 8px;
+           
+
+          a{
+            img {
+              width: 16px;
+              height: auto;
+            }
+          }
+
+          .social_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            background-color: #3bb77e;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s ease;
+
+          }
+        }
+      }
+
+      p {
+        font-size: $font-very-small;
+        font-family: $font-lato;
+        color: #7e7e7e;
+      }
+    }
+  }
+
+  /* --- Responsiveness --- */
+  // Tablet Layout
+  @media (max-width: 1024px) {
+    .footer_main_container {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 40px;
+    }
+    
+    .footer_bottom_bar {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+
+      .social_follow_block {
+        align-items: center;
+      }
+    }
+  }
+
+  // Mobile Layout
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+    
+    .footer_main_container {
+      grid-template-columns: 1fr;
+    }
+
+    .support_phones_block {
+      flex-direction: column;
+      gap: 15px;
     }
   }
 }
