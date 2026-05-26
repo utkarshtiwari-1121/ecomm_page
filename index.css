@@ -1179,32 +1179,6 @@ body {
 .footer_section {
   /* --- Responsiveness --- */
 }
-@media (max-width: 1024px) {
-  .footer_section .footer_main_container {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 40px;
-  }
-  .footer_section .footer_bottom_bar {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  .footer_section .footer_bottom_bar .social_follow_block {
-    align-items: center;
-  }
-}
-@media (max-width: 768px) {
-  .footer_section {
-    padding: 0 2rem;
-  }
-  .footer_section .footer_main_container {
-    grid-template-columns: 1fr;
-  }
-  .footer_section .support_phones_block {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
 
 /* Desktop */
 /* Small Laptop */
