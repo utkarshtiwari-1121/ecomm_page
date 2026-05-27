@@ -1385,7 +1385,7 @@ body {
 
           a {
             img {
-              width: 16px;
+              width: 26px;
               height: auto;
             }
           }
@@ -1396,7 +1396,7 @@ body {
             align-items: center;
             width: 32px;
             height: 32px;
-            background-color: #3bb77e;
+            // background-color: #3bb77e;
             color: white;
             border-radius: 50%;
             text-decoration: none;
@@ -1433,19 +1433,7 @@ body {
   //   }
   // }
 
-  // // Mobile Layout
-  // @media (max-width: 768px) {
-  //   padding: 0 2rem;
-
-  //   .footer_main_container {
-  //     grid-template-columns: 1fr;
-  //   }
-
-  //   .support_phones_block {
-  //     flex-direction: column;
-  //     gap: 15px;
-  //   }
-  // }
+  // Mobile Layout
 }
 
 /* Desktop */
@@ -1515,6 +1503,13 @@ body {
       display: none;
     }
     .header_logo_search_container {
+      .header_logo_container {
+        width: 87%;
+
+        .logo_image {
+          width: 7rem;
+        }
+      }
       .header_cart_container {
         display: none;
       }
@@ -1613,10 +1608,36 @@ body {
       left: 0;
     }
   }
+  .footer_section {
+    .footer_bottom_bar {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      flex-direction: column;
+      gap: 10px;
+      .social_follow_block {
+        align-items: center;
+      }
+    }
+  }
 }
 
 /* Tablet */
 @media (max-width: 768px) {
+  // padding: 0 2rem;
+  .footer_section {
+    .footer_main_container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    // .footer_bottom_bar {
+    //   // .support_phones_block {
+    //   .support_phones_block {
+    //     flex-direction: column;
+    //     gap: 10px;
+    //   }
+    //   // }
+    // }
+  }
 }
 
 /* Mobile */
