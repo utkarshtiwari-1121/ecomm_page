@@ -63,3 +63,21 @@ var swiper = new Swiper(".shop_by_category_swiper", {
     },
   },
 });
+
+
+
+
+function toggle_menu() {
+  const menu = document.querySelector(".hamburger_menu");
+
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+  } else {
+    menu.classList.add("active");
+  }
+}
+
+function closeMenu() {
+  const menu = document.querySelector(".hamburger_menu");
+  menu.classList.remove("active");
+}

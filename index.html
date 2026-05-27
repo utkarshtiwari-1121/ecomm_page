@@ -14,7 +14,7 @@
     <script src="script.js" defer></script>
 
     <section class="hero_section">
-      <header>
+      <header class="header">
         <div class="header_links-aboutus">
           <a href="#">About Us</a>
           <a href="#">my acount</a>
@@ -140,8 +140,153 @@
             <a href="#">My Account</a>
           </div>
         </div>
+        <div class="hamburger_icon">
+          <svg
+            onclick="toggle_menu()"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640"
+          >
+            <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+            <path
+              d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+            />
+          </svg>
+        </div>
       </div>
 
+      <div class="hamburger_menu">
+        <div onclick="closeMenu()" class="crossicon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+            <path
+              d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"
+            />
+          </svg>
+        </div>
+        <!-- Navbar -->
+         <div class="navbar">
+                  <div class="hamburger_item">
+          <a href="#">Home</a>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">About</a>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">Contact</a>
+        </div>
+
+        <!-- Location -->
+        <div class="hamburger_item">
+          <select name="location" id="location">
+            <option value="Your Location">Your Location</option>
+            <option value="India">India</option>
+            <option value="United States">United States</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            <option value="New Zealand">New Zealand</option>
+          </select>
+        </div>
+
+        <!-- Header Links -->
+        <div class="hamburger_item">
+          <a href="#">Compare</a>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">Wishlist</a>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">Cart</a>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">My Account</a>
+        </div>
+
+        <!-- Categories -->
+        <div class="hamburger_item">
+          <select name="all_categories" id="all_categories">
+            <option value="Browse All Categories">Browse All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Home">Home</option>
+            <option value="Beauty">Beauty</option>
+            <option value="Sports">Sports</option>
+          </select>
+        </div>
+
+        <div class="hamburger_item">
+          <p>Deals</p>
+        </div>
+
+        <div class="hamburger_item">
+          <select name="home" id="home">
+            <option value="Home">Home</option>
+          </select>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">About</a>
+        </div>
+
+        <div class="hamburger_item">
+          <select name="shop_by" id="shop_by">
+            <option value="Shop by">Shop by</option>
+          </select>
+        </div>
+
+        <div class="hamburger_item">
+          <select name="vendors" id="vendors">
+            <option value="Vendors">Vendors</option>
+          </select>
+        </div>
+
+        <div class="hamburger_item">
+          <select name="mega_menu" id="mega_menu">
+            <option value="Mega Menu">Mega Menu</option>
+          </select>
+        </div>
+
+        <div class="hamburger_item">
+          <select name="blog" id="blog">
+            <option value="Blog">Blog</option>
+          </select>
+        </div>
+
+        <div class="hamburger_item">
+          <select name="pages" id="pages">
+            <option value="Pages">Pages</option>
+          </select>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">Contact</a>
+        </div>
+
+        <!-- Extra Links -->
+        <div class="hamburger_item">
+          <a href="#">About Us</a>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">My Account</a>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">Wishlist</a>
+        </div>
+
+        <div class="hamburger_item">
+          <a href="#">Order Tracking</a>
+        </div>
+
+         </div>
+      </div>
       <div class="all_categories_container">
         <div class="all_categories_title">
           <div class="browse_all_categories">
