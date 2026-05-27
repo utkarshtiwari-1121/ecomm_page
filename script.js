@@ -23,12 +23,16 @@ var swiper = new Swiper(".shop_by_category_swiper", {
 
     // Mobile
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
     },
 
     // Large Mobile
-    480: {
+    420: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    520: {
       slidesPerView: 3,
       spaceBetween: 15,
     },
