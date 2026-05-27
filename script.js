@@ -81,3 +81,18 @@ function closeMenu() {
   const menu = document.querySelector(".hamburger_menu");
   menu.classList.remove("active");
 }
+
+function filters() {
+  const filters = document.querySelector(".filters_sidebar");
+
+  if (filters.classList.contains("active")) {
+    filters.classList.remove("active");
+  } else {
+    filters.classList.add("active");
+  }
+}
+
+// function closeFilters() {
+//   const filters = document.querySelector(".filters_sidebar");
+//   filters.classList.remove("active");
+// }
