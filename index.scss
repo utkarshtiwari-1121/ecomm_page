@@ -204,9 +204,8 @@ body {
         object-fit: cover;
       }
     }
-
     .hamburger_icon {
-      // display: none;
+      display: none;
     }
   }
 
@@ -291,6 +290,9 @@ body {
         font-weight: 300;
       }
     }
+  }
+  .hamburger_menu {
+    display: none;
   }
 }
 
@@ -1512,6 +1514,9 @@ body {
     .header_logo_search_container {
       .header_cart_container {
         display: none;
+      }
+      .hamburger_icon {
+        display: block;
       }
     }
     .hamburger_menu {

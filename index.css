@@ -156,6 +156,9 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.hero_section .header_logo_search_container .hamburger_icon {
+  display: none;
+}
 .hero_section .all_categories_container {
   display: flex;
   justify-content: space-between;
@@ -231,6 +234,9 @@ body {
   font-size: 13px;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
+}
+.hero_section .hamburger_menu {
+  display: none;
 }
 
 .products_main_container {
@@ -1226,6 +1232,9 @@ body {
   }
   .hero_section .header_logo_search_container .header_cart_container {
     display: none;
+  }
+  .hero_section .header_logo_search_container .hamburger_icon {
+    display: block;
   }
   .hero_section .hamburger_menu {
     position: fixed;
