@@ -535,7 +535,7 @@ body {
 }
 .products_main_container .products_container .deals_of_the_day_container .dod_card .dod_banner_image {
   background-image: url(img/dod_bg_image.png);
-  width: 20rem;
+  width: clamp(18rem, 17.6rem + 2vw, 20rem);
   aspect-ratio: 12/11;
   border-radius: 15px;
   background-size: cover;
@@ -559,6 +559,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  width: 42px;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 5px;
@@ -1167,10 +1168,10 @@ body {
 .footer_section .footer_bottom_bar .support_phones_block .phone_item {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: clamp(0.625rem, 0.5625rem + 0.3125vw, 0.9375rem);
 }
 .footer_section .footer_bottom_bar .support_phones_block .phone_item img {
-  width: 35px;
+  width: clamp(1.4375rem, 1.2875rem + 0.75vw, 2.1875rem);
   height: auto;
 }
 .footer_section .footer_bottom_bar .support_phones_block .phone_item .phone_text h4 {
@@ -1355,7 +1356,8 @@ body {
     flex-direction: column;
     background: rgb(255, 255, 255);
     overflow-y: auto;
-    height: 91vh;
+    top: 0;
+    bottom: 0;
     position: fixed;
     border: 1px solid rgb(194, 194, 194);
     border-radius: 16px;
@@ -1546,5 +1548,24 @@ body {
     gap: 1rem;
     align-items: flex-start;
     max-width: clamp(30rem, 18.5714rem + 17.8571vw, 40rem);
+  }
+}
+@media (max-width: 350px) {
+  .products_main_container .products_container .deals_of_the_day_container .dod_shopnow {
+    min-width: 17rem;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+  }
+  .footer_section .footer_bottom_bar .support_phones_block {
+    flex-direction: column;
+  }
+  .emailer .emailer_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer_section .footer_bottom_bar .social_follow_block .social_header {
+    gap: 1px;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=index.css.map */

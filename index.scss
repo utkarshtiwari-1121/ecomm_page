@@ -668,7 +668,8 @@ body {
 
         .dod_banner_image {
           background-image: url(img/dod_bg_image.png);
-          width: 20rem;
+          //20rem to 18rem form 1920px to 320PX
+          width: clamp(18rem, 17.6rem + 2vw, 20rem);
           aspect-ratio: 12 / 11;
           border-radius: 15px;
           background-size: cover;
@@ -695,6 +696,8 @@ body {
               display: flex;
               flex-direction: column;
               gap: 3px;
+                  width: 42px;
+
               height: fit-content;
               border-radius: 5px;
               padding: 3px;
@@ -1397,10 +1400,11 @@ body {
       .phone_item {
         display: flex;
         align-items: center;
-        gap: 15px;
+        //15 px to 10 px from 1920 to 320px
+        gap: clamp(0.625rem, 0.5625rem + 0.3125vw, 0.9375rem);
 
         img {
-          width: 35px;
+          width: clamp(1.4375rem, 1.2875rem + 0.75vw, 2.1875rem);
           height: auto;
         }
 
@@ -1658,7 +1662,9 @@ body {
       flex-direction: column;
       background: rgb(255, 255, 255);
       overflow-y: auto;
-      height: 91vh;
+      // height: 91vh;
+      top: 0;
+      bottom: 0;
       position: fixed;
       border: 1px solid rgb(194, 194, 194);
       border-radius: 16px;
@@ -1925,6 +1931,48 @@ body {
       }
     }
   }
+}
+
+@media (max-width: 350px) {
+.products_main_container {
+  .products_container{
+     .deals_of_the_day_container {
+      .dod_shopnow{
+                min-width: 17rem;
+        border-radius: 15px;
+        padding: 0.5rem 1rem;
+      }
+     }
+  }
+}
+
+  .footer_section {
+    .footer_bottom_bar {
+      .support_phones_block{
+            flex-direction: column;
+
+      }
+    }
+  }
+      .emailer {
+        .emailer_container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          // padding: 5px;
+        }
+      }
+.footer_section {
+  .footer_bottom_bar {
+    .social_follow_block {
+      .social_header {
+        gap: 1px;
+    flex-direction: column;
+      }
+    }
+  }
+}
+
 }
 
 // http://192.168.29.3:5500/
