@@ -11,11 +11,11 @@ $font-body: 16px;
 //$font-small: 15px to 13px from 1920 to 1260px
 $font-small: clamp(0.8125rem, 0.5739rem + 0.303vw, 0.9375rem);
 $font-very-small: 13px;
-//heading 50px to 33 px from 1920 to 1024px
-$font-heading: clamp(2.0625rem, 0.8482rem + 1.8973vw, 3.125rem);
+//heading 50px to 27 px from 1920 to 320px
+$font-heading: clamp(1.6875rem, 1.4rem + 1.4375vw, 3.125rem);
 
-//subheading 30px to 22 px from 1920 to 1024px
-$font-subheading: clamp(1.375rem, 0.8036rem + 0.8929vw, 1.875rem);
+//subheading 30px to 19 px from 1920 to 320px
+$font-subheading: clamp(1.1875rem, 1.05rem + 0.6875vw, 1.875rem);
 //26px to 21px from 1920 to 1260px
 $font-subsubheading: clamp(1.3125rem, 0.7159rem + 0.7576vw, 1.625rem);
 $font-supersubheading: 23px;
@@ -206,6 +206,63 @@ body {
     }
     .hamburger_icon {
       display: none;
+    }
+  }
+
+  .header_search_container {
+    display: none;
+    align-items: center;
+    width: 100%;
+    padding: 10px 1rem;
+    margin: 0 auto;
+    // border-bottom: 1px solid #e0e0e0;
+    .search_container {
+      display: flex;
+      // gap: 10px;
+      justify-content: space-between;
+      // border: 1px solid red;
+      //15px to 6 px form 1920 to 1024px
+      padding: clamp(0.375rem, -0.2679rem + 1.0045vw, 0.9375rem);
+
+      border: 3px solid #bce3c9;
+      border-radius: 5px;
+      width: 100%;
+      select {
+        border: none;
+        border-right: 1px solid #cacaca;
+
+        //   outline: none;
+        font-weight: 300;
+        background-color: transparent;
+        font-size: $font-small;
+        font-family: $font-quicksand;
+      }
+      input {
+        border: none;
+        outline: none;
+        font-weight: 300;
+        background-color: transparent;
+        font-size: $font-small;
+        font-family: $font-lato;
+        //   flex: 1;
+        //   width: 100%;
+      }
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: $font-small;
+        font-family: $font-lato;
+        svg {
+          width: 20px;
+        }
+      }
+      .input_search {
+        //   display: flex;
+        //   width: 100%;
+        //   gap: 10px;
+        //   width: 100%;
+      }
     }
   }
 
@@ -520,6 +577,7 @@ body {
             background-position: inherit;
             align-items: center;
             padding: 3rem;
+            height: 100%;
             .herobanner_content_container {
               display: flex;
               flex-direction: column;
@@ -1334,7 +1392,7 @@ body {
     /* Center */
     .support_phones_block {
       display: flex;
-      gap: 3rem;
+      gap: clamp(0.3125rem, -0.225rem + 2.6875vw, 3rem);
 
       .phone_item {
         display: flex;
@@ -1603,9 +1661,30 @@ body {
       height: 91vh;
       position: fixed;
       border: 1px solid rgb(194, 194, 194);
-      // border-radius: 16px;
+      border-radius: 16px;
       transition: all 0.5s cubic-bezier(0.15, 1.24, 1, 1.28);
-      gap: 10px;
+      gap: 16px;
+      .category_filter_container {
+        width: fit-content;
+        border: none;
+        box-shadow: none;
+        border-radius: 15px;
+        padding: 1.5rem;
+      }
+      .price_filter_container {
+        width: fit-content;
+        border: none;
+        box-shadow: none;
+        border-radius: 15px;
+        padding: 1.5rem;
+      }
+      .new_products_main_container {
+        width: fit-content;
+        border: none;
+        box-shadow: none;
+        border-radius: 15px;
+        padding: 1.5rem;
+      }
     }
     .filters_sidebar.active {
       left: 0;
@@ -1644,8 +1723,87 @@ body {
 }
 
 @media (max-width: 693px) {
+  .hero_section {
+    .header_logo_search_container {
+      .header_search_container {
+        display: none;
+      }
+    }
+    .header_search_container {
+      display: block;
+      align-items: center;
+      width: 100%;
+      padding: 10px 1rem;
+      margin: 0 auto;
+      border-bottom: 1px solid #e0e0e0;
+      .search_container {
+        display: flex;
+        // gap: 10px;
+        justify-content: space-between;
+        // border: 1px solid red;
+        //15px to 6 px form 1920 to 1024px
+        padding: clamp(0.375rem, -0.2679rem + 1.0045vw, 0.9375rem);
+
+        border: 3px solid #bce3c9;
+        border-radius: 5px;
+        width: 100%;
+        select {
+          border: none;
+          border-right: 1px solid #cacaca;
+
+          //   outline: none;
+          font-weight: 300;
+          background-color: transparent;
+          font-size: $font-small;
+          font-family: $font-quicksand;
+        }
+        input {
+          border: none;
+          outline: none;
+          font-weight: 300;
+          background-color: transparent;
+          font-size: $font-small;
+          font-family: $font-lato;
+          //   flex: 1;
+          //   width: 100%;
+        }
+        button {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          font-size: $font-small;
+          font-family: $font-lato;
+          svg {
+            width: 20px;
+          }
+        }
+        .input_search {
+          //   display: flex;
+          //   width: 100%;
+          //   gap: 10px;
+          //   width: 100%;
+        }
+      }
+    }
+  }
   .products_main_container {
+    margin-top: 10px;
+
     .products_container {
+      .deals_of_the_day_container {
+        .dod_shopnow_card_container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+          justify-content: center;
+        }
+        .dod_hours_card_container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+          justify-content: center;
+        }
+      }
       .herobanner_slider {
         .swiper {
           aspect-ratio: 7/6;
@@ -1670,13 +1828,101 @@ body {
   }
   .emailer {
     .emailer_container {
+      position: relative;
+      overflow: hidden;
       background-image:
-        linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.11)),
         url(img/EMAILER_BG.png), url(img/EMAILER_BG_OVERLAY.png);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.368) 0%,
+          rgba(0, 0, 0, 0.386) 100%
+        );
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .herobanner_content_container {
+        position: relative;
+        z-index: 2;
+
+        .herobanner_heading {
+          h1 {
+            color: #c8deed;
+          }
+          h2 {
+            color: #d0d0d0;
+          }
+        }
+      }
     }
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
+  .products_main_container {
+    .products_container {
+      .herobanner_slider {
+        .Subscribe{
+          gap: 5px;
+          button{
+            padding: 10px;
+          }
+        }
+        .swiper {
+          .swiper-wrapper {
+            .swiper-slide {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+      .deals_of_the_day_container {
+        .dod_shopnow {
+          min-width: 20rem;
+          border-radius: 15px;
+          padding: 1.5rem 3rem;
+          .dod_shopnow_content_container {
+            max-width: 15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+          }
+        }
+      }
+    }
+  }
+  .shop_by_category {
+    .product_category_main_container {
+      .next_previous_buttons {
+        display: none;
+      }
+    }
+  }
+
+  .emailer {
+    .emailer_container {
+      padding: 1rem 30px;
+
+      .herobanner_content_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        max-width: clamp(30rem, 18.5714rem + 17.8571vw, 40rem);
+      }
+    }
+  }
 }
+
+// http://192.168.29.3:5500/
