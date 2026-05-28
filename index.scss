@@ -1879,6 +1879,8 @@ body {
         }
         .swiper {
           .swiper-wrapper {
+            height: auto;
+            aspect-ratio: 7/6;
             .swiper-slide {
               padding: 1rem;
             }

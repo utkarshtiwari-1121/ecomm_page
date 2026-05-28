@@ -1514,6 +1514,10 @@ body {
   .products_main_container .products_container .herobanner_slider .Subscribe button {
     padding: 10px;
   }
+  .products_main_container .products_container .herobanner_slider .swiper .swiper-wrapper {
+    height: auto;
+    aspect-ratio: 7/6;
+  }
   .products_main_container .products_container .herobanner_slider .swiper .swiper-wrapper .swiper-slide {
     padding: 1rem;
   }
