@@ -12,6 +12,9 @@ body {
   font-family: "Lato", sans-serif;
   color: #253d4e;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 .hero_section {
   width: 100%;
@@ -1381,6 +1384,9 @@ body {
   }
   .hero_section .hamburger_menu_container .hamburger_menu.active {
     right: 0;
+  }
+  .hero_section .hamburger_menu_container .hamburger_menu.active body {
+    overflow: hidden;
   }
   .hero_section .hamburger_menu_container.active {
     right: 0;

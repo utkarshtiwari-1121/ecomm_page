@@ -67,27 +67,42 @@ var swiper = new Swiper(".shop_by_category_swiper", {
   },
 });
 
+var swiper = new Swiper(".shop_card_swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
-    var swiper = new Swiper(".shop_card_swiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-
-
+function updateBodyScroll() {
+  const menuActive = document
+    .querySelector(".hamburger_menu_container")
+    ?.classList.contains("active");
+  const filtersActive = document
+    .querySelector(".filter_sidebar_container")
+    ?.classList.contains("active");
+  if (menuActive || filtersActive) {
+    document.body.classList.add("no-scroll");
+  } else {
+    document.body.classList.remove("no-scroll");
+  }
+}
 
 function toggle_menu() {
   const menu = document.querySelector(".hamburger_menu");
   const overlay = document.querySelector(".hamburger_menu_container");
 
-  if (menu.classList.contains("active") || overlay.classList.contains("active")) {
+  if (
+    menu.classList.contains("active") ||
+    overlay.classList.contains("active")
+  ) {
     menu.classList.remove("active");
     overlay.classList.remove("active");
   } else {
     menu.classList.add("active");
     overlay.classList.add("active");
   }
+  updateBodyScroll();
 }
 
 function closeMenu() {
@@ -96,6 +111,7 @@ function closeMenu() {
 
   menu.classList.remove("active");
   overlay.classList.remove("active");
+  updateBodyScroll();
 }
 
 function filters() {
@@ -112,6 +128,7 @@ function filters() {
     filters.classList.add("active");
     overlay.classList.add("active");
   }
+  updateBodyScroll();
 }
 
 // function closeFilters() {
