@@ -689,7 +689,7 @@ body.no-scroll {
 }
 .products_main_container .products_container .deals_of_the_day_container .dod_shopnow .dod_shopnow_content_container h3 {
   font-family: "Quicksand", sans-serif;
-  font-size: 23px;
+  font-size: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.4375rem);
   font-weight: bold;
 }
 .products_main_container .products_container .deals_of_the_day_container .dod_shopnow .dod_shopnow_content_container button {
@@ -718,6 +718,9 @@ body.no-scroll {
   width: 100%;
   height: 100%;
   display: none;
+}
+.products_main_container .products_container .deals_of_the_day_container .swiper.shop_card_swiper .dod_shopnow {
+  width: 100%;
 }
 .products_main_container .products_container .deals_of_the_day_container .swiper-slide {
   text-align: center;
@@ -1099,7 +1102,7 @@ body.no-scroll {
 }
 .footer_section .footer_main_container .footer_col h3 {
   font-family: "Quicksand", sans-serif;
-  font-size: 23px;
+  font-size: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.4375rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #253d4e;
@@ -1642,6 +1645,10 @@ body.no-scroll {
     flex-direction: column;
     justify-content: space-around;
   }
+  .shop_by_category .multiview_main_grid_container .div .product_one:nth-child(even) {
+    background-color: rgba(89, 212, 154, 0.1058823529);
+    display: flex;
+  }
   .shop_by_category .product_category_main_container .next_previous_buttons {
     display: none;
   }
@@ -1663,6 +1670,16 @@ body.no-scroll {
     width: calc(100% + 2rem);
     margin-left: -1rem;
     margin-right: -1rem;
+  }
+  .footer_section .footer_bottom_bar {
+    gap: 15px;
+  }
+  .footer_section .footer_bottom_bar .support_phones_block {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footer_section .footer_bottom_bar .copyright_block {
+    text-align: center;
   }
 }
 @media (max-width: 350px) {

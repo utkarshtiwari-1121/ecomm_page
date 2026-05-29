@@ -18,7 +18,8 @@ $font-heading: clamp(1.6875rem, 1.4rem + 1.4375vw, 3.125rem);
 $font-subheading: clamp(1.1875rem, 1.05rem + 0.6875vw, 1.875rem);
 //26px to 21px from 1920 to 1260px
 $font-subsubheading: clamp(1.3125rem, 0.7159rem + 0.7576vw, 1.625rem);
-$font-supersubheading: 23px;
+// 23px to 18px form 1920 to 320px
+$font-supersubheading: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.4375rem);
 
 * {
   margin: 0;
@@ -32,6 +33,8 @@ body {
   font-family: $font-lato;
   // font-weight: 400 ;
   color: #253d4e;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
   &.no-scroll {
     overflow: hidden;
   }
@@ -879,6 +882,11 @@ body {
         width: 100%;
         height: 100%;
         display: none;
+
+        .dod_shopnow {
+          // min-width: unset;
+          width: 100%;
+        }
       }
 
       .swiper-slide {
@@ -1945,8 +1953,6 @@ body {
           position: absolute;
           right: clamp(9.375rem, 10.0184rem + -3.2172vw, 8.625rem);
 
-
-
           top: 50%;
           transform: translateY(-50%);
           pointer-events: none;
@@ -2081,6 +2087,11 @@ body {
 @media (max-width: 480px) {
   .products_main_container {
     .products_container {
+      .deals_of_the_day_container {
+        .shop_card_swiper {
+          // overflow: hidden;
+        }
+      }
       .herobanner_slider {
         .Subscribe {
           gap: 5px;
@@ -2114,6 +2125,17 @@ body {
     }
   }
   .shop_by_category {
+    .multiview_main_grid_container {
+      .div {
+        .product_one {
+          &:nth-child(even) {
+            background-color: #59d49a1b;
+            display: flex;
+            // flex-direction: row-reverse;
+          }
+        }
+      }
+    }
     .product_category_main_container {
       .next_previous_buttons {
         display: none;
@@ -2139,12 +2161,42 @@ body {
 }
 
 @media (max-width: 425px) {
+  .products_main_container {
+    .products_container {
+      .deals_of_the_day_container {
+        .shop_card_swiper {
+          // width: calc(100% + 2rem);
+          // margin-left: -1rem;
+          // margin-right: -1rem;
+          // overflow: visible;
+        }
+      }
+    }
+  }
   .shop_by_category {
     .shop_by_category_swiper {
       width: calc(100% + 2rem);
 
       margin-left: -1rem;
       margin-right: -1rem;
+    }
+  }
+  .footer_section {
+    .footer_bottom_bar {
+      div {
+        // border-bottom: 1px solid #cacaca;
+        // padding: 5px;
+      }
+      gap: 15px;
+      .support_phones_block {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .copyright_block {
+        // p{
+        text-align: center;
+        // }
+      }
     }
   }
 }

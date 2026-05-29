@@ -1,4 +1,4 @@
-var swiper = new Swiper(".heroSwiper", {
+var swiper_1 = new Swiper(".heroSwiper", {
   pagination: {
     el: ".hero_banner",
     clickable: true,
@@ -8,7 +8,7 @@ var swiper = new Swiper(".heroSwiper", {
 var swiper = new Swiper(".shop_by_category_swiper", {
   slidesPerView: 8,
   loop: true,
-  spaceBetween: 20,
+  spaceBetween: 30,
   cssMode: false,
 
   navigation: {
@@ -27,7 +27,7 @@ var swiper = new Swiper(".shop_by_category_swiper", {
     },
 
     // Large Mobile
-    374: {
+    354: {
       slidesPerView: 2,
       spaceBetween: 15,
     },
@@ -67,6 +67,46 @@ var swiper = new Swiper(".shop_by_category_swiper", {
   },
 });
 
+
+var shopCardSwiper = new Swiper(".shop_card_swiper", {
+  // observer: true,
+  // observeParents: true,
+  breakpoints: {
+    // Mobile
+    340: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    // Large Mobile
+    419: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    // Tablet
+    470: {
+      slidesPerView: 1.1,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 1.8,
+      spaceBetween: 20,
+    },
+    // Desktop (up to 1295px where it turns off)
+    1024: {
+      slidesPerView: 1.5,
+      spaceBetween: 25,
+    },
+    1115: {
+      slidesPerView: 1.9,
+      spaceBetween: 25,
+    },
+    1165: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+  },
+});
+
 const minPrice = document.getElementById("minPrice");
 const range = document.getElementById("minPriceInput");
 const maxPrice = document.getElementById("maxPrice");
@@ -78,13 +118,6 @@ range.addEventListener("input", () => {
 
 rangeMax.addEventListener("input", () => {
   maxPrice.textContent = rangeMax.value;
-});
-
-var swiper = new Swiper(".shop_card_swiper", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 });
 
 function updateBodyScroll() {
