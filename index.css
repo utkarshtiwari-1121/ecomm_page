@@ -1439,7 +1439,7 @@ body.no-scroll {
   }
   .products_main_container .filter_sidebar_container .filters_sidebar {
     display: flex;
-    left: -100%;
+    transform: translateX(-100%);
     z-index: 2;
     flex-direction: column;
     background: rgb(255, 255, 255);
@@ -1478,7 +1478,7 @@ body.no-scroll {
     padding: 1.5rem;
   }
   .products_main_container .filter_sidebar_container .filters_sidebar.active {
-    left: 0;
+    transform: translateX(0%);
   }
   .products_main_container .filter_sidebar_container.active {
     left: 0;

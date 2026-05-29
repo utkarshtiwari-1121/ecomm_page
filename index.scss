@@ -1767,7 +1767,7 @@ body {
 
       .filters_sidebar {
         display: flex;
-        left: -100%;
+        transform: translateX(-100%);
         z-index: 2;
         flex-direction: column;
 
@@ -1805,7 +1805,8 @@ body {
         }
       }
       .filters_sidebar.active {
-        left: 0;
+        // left: 0;
+        transform: translateX(0%);
         // backdrop-filter: blur(2px);
       }
     }
