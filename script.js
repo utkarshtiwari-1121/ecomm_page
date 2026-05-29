@@ -27,7 +27,7 @@ var swiper = new Swiper(".shop_by_category_swiper", {
     },
 
     // Large Mobile
-    420: {
+    374: {
       slidesPerView: 2,
       spaceBetween: 15,
     },
