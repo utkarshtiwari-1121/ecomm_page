@@ -67,6 +67,19 @@ var swiper = new Swiper(".shop_by_category_swiper", {
   },
 });
 
+const minPrice = document.getElementById("minPrice");
+const range = document.getElementById("minPriceInput");
+const maxPrice = document.getElementById("maxPrice");
+const rangeMax = document.getElementById("maxPriceInput");
+
+range.addEventListener("input", () => {
+  minPrice.textContent = range.value;
+});
+
+rangeMax.addEventListener("input", () => {
+  maxPrice.textContent = rangeMax.value;
+});
+
 var swiper = new Swiper(".shop_card_swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
