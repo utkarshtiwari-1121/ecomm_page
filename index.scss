@@ -1943,7 +1943,9 @@ body {
         .select_arrow {
           width: 14px;
           position: absolute;
-          right: clamp(8.625rem, 6.1366rem + 3.1674vw, 9.9375rem);
+          right: clamp(9.375rem, 10.0184rem + -3.2172vw, 8.625rem);
+
+
 
           top: 50%;
           transform: translateY(-50%);
