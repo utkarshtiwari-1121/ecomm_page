@@ -67,20 +67,21 @@ body.no-scroll {
   align-items: center;
   padding: 0 clamp(1rem, -3.5714rem + 7.1429vw, 5rem);
   border-bottom: 1px solid #e0e0e0;
-  padding-bottom: clamp(0.625rem, -0.8036rem + 2.2321vw, 1.875rem);
-  padding-top: clamp(0.625rem, -0.8036rem + 2.2321vw, 1.875rem);
+  padding-bottom: 8px;
+  padding-top: 8px;
 }
 .hero_section .header_logo_search_container .header_logo_container {
   display: flex;
   justify-content: space-between;
   width: 55%;
+  align-items: center;
 }
 .hero_section .header_logo_search_container .header_logo_container .logo_image {
   width: 20%;
   height: auto;
 }
 .hero_section .header_logo_search_container .header_logo_container .logo_image img {
-  width: 100%;
+  width: 88%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -93,7 +94,7 @@ body.no-scroll {
 .hero_section .header_logo_search_container .header_search_container .search_container {
   display: flex;
   justify-content: space-between;
-  padding: clamp(0.375rem, -0.2679rem + 1.0045vw, 0.9375rem);
+  padding: clamp(0.375rem, -0.0536rem + 0.6696vw, 0.75rem);
   border: 3px solid #bce3c9;
   border-radius: 5px;
   width: 100%;
@@ -166,7 +167,6 @@ body.no-scroll {
   border-radius: 5px;
   padding: 5px 15px;
   max-height: clamp(2rem, 0.0909rem + 2.4242vw, 3rem);
-  box-shadow: 1px 2px 11px 1px rgb(219, 213, 213);
 }
 .hero_section .header_logo_search_container .header_cart_container div img {
   width: clamp(0.9375rem, -0.1364rem + 1.3636vw, 1.5rem);
@@ -181,13 +181,12 @@ body.no-scroll {
   display: none;
   align-items: center;
   width: 100%;
-  padding: 10px 1rem;
   margin: 0 auto;
 }
 .hero_section .header_search_container .search_container {
   display: flex;
   justify-content: space-between;
-  padding: clamp(0.375rem, -0.2679rem + 1.0045vw, 0.9375rem);
+  padding: clamp(0.375rem, -0.0536rem + 0.6696vw, 0.75rem);
   border: 3px solid #bce3c9;
   border-radius: 5px;
   width: 100%;
@@ -1453,7 +1452,7 @@ body.no-scroll {
     position: fixed;
     border: 1px solid rgb(194, 194, 194);
     border-radius: 16px;
-    transition: all 0.5s cubic-bezier(0.15, 1.24, 1, 1.28);
+    transition: all 0.5s ease-out;
     gap: 16px;
   }
   .products_main_container .filter_sidebar_container .filters_sidebar .category_filter_container {
@@ -1520,11 +1519,11 @@ body.no-scroll {
     align-items: center;
     width: 100%;
     border-bottom: 1px solid #e0e0e0;
+    padding: 5px 1rem;
   }
   .hero_section .header_search_container .search_container {
     display: flex;
     justify-content: space-between;
-    padding: clamp(0.375rem, -0.2679rem + 1.0045vw, 0.9375rem);
     border: 3px solid #bce3c9;
     border-radius: 5px;
     width: 100%;

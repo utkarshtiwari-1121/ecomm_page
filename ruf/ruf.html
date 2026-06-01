@@ -5,14 +5,30 @@
     <title>Document</title>
     <style>
       body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+        background-color: #e7e9eb;
       }
+      #myDIV {
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        grid-template-areas: 
+        'box7 box7 box7 box7'
+        'box2 box3 box4 box4'
+        'box5 box5 box6 box6'
+        'box1 box1 box1 box1'
+        ;
+        background-color: #2196f3;
+        padding: 10px;
+      }
+      #myDIV div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
 
-      h1 {
-        /* border: 2px solid red; */
       }
+      
     </style>
   </head>
 
@@ -38,5 +54,17 @@
       ></div>
     </div>
     <!-- <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, in. Repudiandae quod voluptatem deleniti natus officia ullam illo? Tempora aliquid odit explicabo repellendus nihil, eius aperiam officiis adipisci amet. Consequatur!</h1> -->
+
+    <h1>The grid-column property</h1>
+
+    <div id="myDIV">
+      <div style="grid-area: box1;" class="item1">1</div>
+      <div style="grid-area: box2;" class="item2">2</div>
+      <div style="grid-area: box3;" class="item3">3</div>
+      <div style="grid-area: box4;" class="item4">4</div>
+      <div style="grid-area: box5;" class="item5">5</div>
+      <div style="grid-area: box6;" class="item6">6</div>
+      <div style="grid-area: box7;" class="item7">7</div>
+    </div>
   </body>
 </html>
