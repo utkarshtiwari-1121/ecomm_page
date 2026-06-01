@@ -113,11 +113,28 @@ const rangeMax = document.getElementById("maxPriceInput");
 
 range.addEventListener("input", () => {
   minPrice.textContent = range.value;
+  filterByPrice();
 });
 
 rangeMax.addEventListener("input", () => {
   maxPrice.textContent = rangeMax.value;
+  filterByPrice();
 });
+
+function filterByPrice() {
+  const minPrice = Number(range.value);
+  const maxPrice = Number(rangeMax.value);
+
+  productCards.forEach((card) => {
+    const cardPrice = Number(card.dataset.price);
+
+    if (cardPrice >= minPrice && cardPrice <= maxPrice) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
 
 function updateBodyScroll() {
   const menuActive = document
