@@ -339,11 +339,14 @@ body.no-scroll {
   align-items: center;
   gap: 10px;
   border: 1px solid #e0e0e0;
+  background-color: white;
+  cursor: pointer;
   border-radius: 5px;
   padding: 10px 10px;
   width: clamp(13.5rem, 10.6429rem + 4.4643vw, 16rem);
   margin: 5px 0;
   justify-content: space-between;
+  transition: all 0.3s ease;
 }
 .products_main_container .filters_sidebar .category_filter_container .category_list .category_item div {
   display: flex;
@@ -353,6 +356,20 @@ body.no-scroll {
 .products_main_container .filters_sidebar .category_filter_container .category_list .category_item img {
   width: 30px;
   height: auto;
+}
+.products_main_container .filters_sidebar .category_filter_container .category_list .category_item:hover {
+  border-color: #3bb77e;
+}
+.products_main_container .filters_sidebar .category_filter_container .category_list .category_item:hover p {
+  color: #3bb77e;
+}
+.products_main_container .filters_sidebar .category_filter_container .category_list .category_item.active {
+  border-color: #3bb77e;
+  background-color: #f4fff9;
+}
+.products_main_container .filters_sidebar .category_filter_container .category_list .category_item.active p {
+  color: #3bb77e;
+  font-weight: 600;
 }
 .products_main_container .filters_sidebar .category_filter_container .category_main_container h2 {
   font-size: clamp(1.3125rem, 0.7159rem + 0.7576vw, 1.625rem);
@@ -805,6 +822,15 @@ body.no-scroll {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.products_main_container .popular_products_cards_contianer .popular_products_cards .popular_card_content .tag span {
+  border: 1px solid #3bb77e;
+  color: rgb(0, 0, 0);
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-size: clamp(0.5rem, 0.475rem + 0.125vw, 0.625rem);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
 }
 .products_main_container .popular_products_cards_contianer .popular_card_category_rating {
   display: flex;

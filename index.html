@@ -461,7 +461,7 @@
       <div onclick="filters()" class="filter_sidebar_container">
         <div class="filters_sidebar" onclick="event.stopPropagation()">
           <div class="category_filter_container">
-            <div class="category_main_container">
+            <!-- <div class="category_main_container">
               <h2>Categories</h2>
               <div class="category_list">
                 <div class="category_item">
@@ -499,6 +499,52 @@
                   </div>
                   <p>10</p>
                 </div>
+              </div>
+            </div> -->
+
+            <div class="category_main_container">
+              <h2>Categories</h2>
+
+              <div class="category_list">
+                <button class="category_item" data-filter="milk-and-dairy">
+                  <div>
+                    <img src="img/milk.png" alt="Milk and Dairy" />
+                    <p>Milk and Dairy</p>
+                  </div>
+                  <p>13</p>
+                </button>
+
+                <button class="category_item" data-filter="clothing">
+                  <div>
+                    <img src="img/clothing.png" alt="Clothing" />
+                    <p>Clothing</p>
+                  </div>
+                  <p>4</p>
+                </button>
+
+                <button class="category_item" data-filter="pet-food">
+                  <div>
+                    <img src="img/pet food.svg.png" alt="Pet Food" />
+                    <p>Pet Food</p>
+                  </div>
+                  <p>5</p>
+                </button>
+
+                <button class="category_item" data-filter="baking-material">
+                  <div>
+                    <img src="img/baking material.png" alt="Baking Material" />
+                    <p>Baking Material</p>
+                  </div>
+                  <p>8</p>
+                </button>
+
+                <button class="category_item" data-filter="fresh-fruit">
+                  <div>
+                    <img src="img/fresh fruit.png" alt="Fresh Fruit" />
+                    <p>Fresh Fruit</p>
+                  </div>
+                  <p>10</p>
+                </button>
               </div>
             </div>
           </div>
@@ -727,10 +773,20 @@
         </div>
 
         <div class="popular_products_cards_contianer">
-          <div class="popular_products_cards">
+          <!-- Card 1 (already had tags) -->
+          <div
+            class="popular_products_cards"
+            data-tags="clothing,baking-material"
+            data-price="599"
+            data-color="green"
+          >
             <div class="popular_card_content">
               <div class="popular_products_cards_image">
                 <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Clothing</span>
+                <span>Baking Material</span>
               </div>
               <div class="popular_card_category_rating">
                 <div class="popular_card_category">Snacks</div>
@@ -750,7 +806,6 @@
               <div class="category_name">
                 <p>Seeds of Change Organic Quinoe</p>
               </div>
-
               <div class="category_by">
                 <p>By <span style="color: #3bb77e">NestFood</span></p>
               </div>
@@ -769,10 +824,19 @@
             </div>
           </div>
 
-          <div class="popular_products_cards">
+          <!-- Card 2 -->
+          <div
+            class="popular_products_cards"
+            data-tags="milk-and-dairy"
+            data-price="599"
+            data-color="blue"
+          >
             <div class="popular_card_content">
               <div class="popular_products_cards_image">
                 <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Milk and Dairy</span>
               </div>
               <div class="popular_card_category_rating">
                 <div class="popular_card_category">Snacks</div>
@@ -792,48 +856,6 @@
               <div class="category_name">
                 <p>Seeds of Change Organic Quinoe</p>
               </div>
-
-              <div class="category_by">
-                <p>By <span style="color: #3bb77e">NestFood</span></p>
-              </div>
-            </div>
-            <div class="popular_card_price">
-              <div class="price">
-                <span class="new-price">₹599</span>
-                <span class="old-price">₹999</span>
-              </div>
-              <div class="add_to_cart_button">
-                <button>
-                  <img src="img/cart_icon.png" alt="cart icon" />
-                  <p>Add</p>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="popular_products_cards">
-            <div class="popular_card_content">
-              <div class="popular_products_cards_image">
-                <img src="img/seeds of change.jpg" alt="seeds of change" />
-              </div>
-              <div class="popular_card_category_rating">
-                <div class="popular_card_category">Snacks</div>
-                <div class="popular_card_rating">
-                  <svg
-                    width="9px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 640 640"
-                  >
-                    <path
-                      d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
-                    />
-                  </svg>
-                  <p>4.5</p>
-                </div>
-              </div>
-              <div class="category_name">
-                <p>Seeds of Change Organic Quinoe</p>
-              </div>
-
               <div class="category_by">
                 <p>By <span style="color: #3bb77e">NestFood</span></p>
               </div>
@@ -852,10 +874,20 @@
             </div>
           </div>
 
-          <div class="popular_products_cards">
+          <!-- Card 3 -->
+          <div
+            class="popular_products_cards"
+            data-tags="pet-food,fresh-fruit"
+            data-price="599"
+            data-color="orange"
+          >
             <div class="popular_card_content">
               <div class="popular_products_cards_image">
                 <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Pet Food</span>
+                <span>Fresh Fruit</span>
               </div>
               <div class="popular_card_category_rating">
                 <div class="popular_card_category">Snacks</div>
@@ -875,7 +907,6 @@
               <div class="category_name">
                 <p>Seeds of Change Organic Quinoe</p>
               </div>
-
               <div class="category_by">
                 <p>By <span style="color: #3bb77e">NestFood</span></p>
               </div>
@@ -894,10 +925,19 @@
             </div>
           </div>
 
-          <div class="popular_products_cards">
+          <!-- Card 4 -->
+          <div
+            class="popular_products_cards"
+            data-tags="baking-material"
+            data-price="599"
+            data-color="red"
+          >
             <div class="popular_card_content">
               <div class="popular_products_cards_image">
                 <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Baking Material</span>
               </div>
               <div class="popular_card_category_rating">
                 <div class="popular_card_category">Snacks</div>
@@ -917,7 +957,6 @@
               <div class="category_name">
                 <p>Seeds of Change Organic Quinoe</p>
               </div>
-
               <div class="category_by">
                 <p>By <span style="color: #3bb77e">NestFood</span></p>
               </div>
@@ -936,10 +975,20 @@
             </div>
           </div>
 
-          <div class="popular_products_cards">
+          <!-- Card 5 -->
+          <div
+            class="popular_products_cards"
+            data-tags="fresh-fruit,milk-and-dairy"
+            data-price="599"
+            data-color="green"
+          >
             <div class="popular_card_content">
               <div class="popular_products_cards_image">
                 <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Fresh Fruit</span>
+                <span>Milk and Dairy</span>
               </div>
               <div class="popular_card_category_rating">
                 <div class="popular_card_category">Snacks</div>
@@ -959,7 +1008,6 @@
               <div class="category_name">
                 <p>Seeds of Change Organic Quinoe</p>
               </div>
-
               <div class="category_by">
                 <p>By <span style="color: #3bb77e">NestFood</span></p>
               </div>
@@ -978,10 +1026,19 @@
             </div>
           </div>
 
-          <div class="popular_products_cards">
+          <!-- Card 6 -->
+          <div
+            class="popular_products_cards"
+            data-tags="clothing"
+            data-price="599"
+            data-color="blue"
+          >
             <div class="popular_card_content">
               <div class="popular_products_cards_image">
                 <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Clothing</span>
               </div>
               <div class="popular_card_category_rating">
                 <div class="popular_card_category">Snacks</div>
@@ -1001,7 +1058,6 @@
               <div class="category_name">
                 <p>Seeds of Change Organic Quinoe</p>
               </div>
-
               <div class="category_by">
                 <p>By <span style="color: #3bb77e">NestFood</span></p>
               </div>
@@ -1020,10 +1076,20 @@
             </div>
           </div>
 
-          <div class="popular_products_cards">
+          <!-- Card 7 -->
+          <div
+            class="popular_products_cards"
+            data-tags="pet-food,baking-material"
+            data-price="599"
+            data-color="orange"
+          >
             <div class="popular_card_content">
               <div class="popular_products_cards_image">
                 <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Pet Food</span>
+                <span>Baking Material</span>
               </div>
               <div class="popular_card_category_rating">
                 <div class="popular_card_category">Snacks</div>
@@ -1043,7 +1109,6 @@
               <div class="category_name">
                 <p>Seeds of Change Organic Quinoe</p>
               </div>
-
               <div class="category_by">
                 <p>By <span style="color: #3bb77e">NestFood</span></p>
               </div>
@@ -1062,10 +1127,19 @@
             </div>
           </div>
 
-          <div class="popular_products_cards">
+          <!-- Card 8 -->
+          <div
+            class="popular_products_cards"
+            data-tags="fresh-fruit"
+            data-price="599"
+            data-color="green"
+          >
             <div class="popular_card_content">
               <div class="popular_products_cards_image">
                 <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Fresh Fruit</span>
               </div>
               <div class="popular_card_category_rating">
                 <div class="popular_card_category">Snacks</div>
@@ -1085,7 +1159,6 @@
               <div class="category_name">
                 <p>Seeds of Change Organic Quinoe</p>
               </div>
-
               <div class="category_by">
                 <p>By <span style="color: #3bb77e">NestFood</span></p>
               </div>
@@ -1104,10 +1177,20 @@
             </div>
           </div>
 
-          <div class="popular_products_cards">
+          <!-- Card 9 -->
+          <div
+            class="popular_products_cards"
+            data-tags="milk-and-dairy,clothing"
+            data-price="599"
+            data-color="red"
+          >
             <div class="popular_card_content">
               <div class="popular_products_cards_image">
                 <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Milk and Dairy</span>
+                <span>Clothing</span>
               </div>
               <div class="popular_card_category_rating">
                 <div class="popular_card_category">Snacks</div>
@@ -1127,7 +1210,56 @@
               <div class="category_name">
                 <p>Seeds of Change Organic Quinoe</p>
               </div>
+              <div class="category_by">
+                <p>By <span style="color: #3bb77e">NestFood</span></p>
+              </div>
+            </div>
+            <div class="popular_card_price">
+              <div class="price">
+                <span class="new-price">₹599</span>
+                <span class="old-price">₹999</span>
+              </div>
+              <div class="add_to_cart_button">
+                <button>
+                  <img src="img/cart_icon.png" alt="cart icon" />
+                  <p>Add</p>
+                </button>
+              </div>
+            </div>
+          </div>
 
+          <!-- Card 10 -->
+          <div
+            class="popular_products_cards"
+            data-tags="pet-food"
+            data-price="599"
+            data-color="blue"
+          >
+            <div class="popular_card_content">
+              <div class="popular_products_cards_image">
+                <img src="img/seeds of change.jpg" alt="seeds of change" />
+              </div>
+              <div class="tag">
+                <span>Pet Food</span>
+              </div>
+              <div class="popular_card_category_rating">
+                <div class="popular_card_category">Snacks</div>
+                <div class="popular_card_rating">
+                  <svg
+                    width="9px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+                    />
+                  </svg>
+                  <p>4.5</p>
+                </div>
+              </div>
+              <div class="category_name">
+                <p>Seeds of Change Organic Quinoe</p>
+              </div>
               <div class="category_by">
                 <p>By <span style="color: #3bb77e">NestFood</span></p>
               </div>

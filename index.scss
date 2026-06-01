@@ -431,12 +431,15 @@ body {
           align-items: center;
           gap: 10px;
           border: 1px solid #e0e0e0;
+          background-color: white;
+          cursor: pointer;
           border-radius: 5px;
           padding: 10px 10px;
           // 16rem to 13.5rem from 1920 to 1024px
           width: clamp(13.5rem, 10.6429rem + 4.4643vw, 16rem);
           margin: 5px 0;
           justify-content: space-between;
+          transition: all 0.3s ease; // smooth transition
 
           div {
             display: flex;
@@ -447,6 +450,26 @@ body {
           img {
             width: 30px;
             height: auto;
+          }
+
+          // hover state
+          &:hover {
+            border-color: #3bb77e;
+
+            p {
+              color: #3bb77e;
+            }
+          }
+
+          // active/selected state
+          &.active {
+            border-color: #3bb77e;
+            background-color: #f4fff9;
+
+            p {
+              color: #3bb77e;
+              font-weight: 600;
+            }
           }
         }
       }
@@ -989,6 +1012,18 @@ body {
             width: 100%;
             height: auto;
             object-fit: cover;
+          }
+        }
+        .tag {
+          span {
+            border: 1px solid #3bb77e;
+            color: rgb(0, 0, 0);
+            padding: 1px 3px;
+            border-radius: 3px;
+            //10px to 8px from 1920 to 320px
+            font-size: clamp(0.5rem, 0.475rem + 0.125vw, 0.625rem);
+            font-family: $font-lato;
+            font-weight: 400;
           }
         }
       }
@@ -2183,4 +2218,4 @@ body {
   }
 }
 
-// http://192.168.29.3:5500/
+// http://192.168.29.3:5501/

@@ -67,7 +67,6 @@ var swiper = new Swiper(".shop_by_category_swiper", {
   },
 });
 
-
 var shopCardSwiper = new Swiper(".shop_card_swiper", {
   // observer: true,
   // observeParents: true,
@@ -181,3 +180,34 @@ function filters() {
 //   const filters = document.querySelector(".filters_sidebar");
 //   filters.classList.remove("active");
 // }
+
+const filterBtns = document.querySelectorAll(".category_item");
+const productCards = document.querySelectorAll(".popular_products_cards");
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+
+    const activeFilters = [...filterBtns]
+      .filter((b) => b.classList.contains("active"))
+      .map((b) => b.dataset.filter);
+
+    productCards.forEach((card) => {
+      const cardTags = card.dataset.tags.split(",");
+
+      if (activeFilters.length === 0) {
+        card.style.display = "block";
+        return;
+      }
+
+      // const hasMatch = activeFilters.every((filter) =>
+      //   cardTags.includes(filter)
+      // );
+      const hasMatch = activeFilters.some((filter) =>
+        cardTags.includes(filter),
+      );
+
+      card.style.display = hasMatch ? "block" : "none";
+    });
+  });
+});
