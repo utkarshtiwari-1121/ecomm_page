@@ -445,11 +445,15 @@ body {
             display: flex;
             align-items: center;
             gap: 10px;
+            color: black;
           }
 
           img {
             width: 30px;
             height: auto;
+          }
+          p {
+            color: black;
           }
 
           // hover state
@@ -1947,10 +1951,9 @@ body {
 
           // -webkit-appearance: none;
           // -moz-appearance: none;
-
           border: none;
           border-right: 1px solid #cacaca;
-
+          color: black;
           //   outline: none;
           font-weight: 300;
           background-color: transparent;

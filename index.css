@@ -352,10 +352,14 @@ body.no-scroll {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: black;
 }
 .products_main_container .filters_sidebar .category_filter_container .category_list .category_item img {
   width: 30px;
   height: auto;
+}
+.products_main_container .filters_sidebar .category_filter_container .category_list .category_item p {
+  color: black;
 }
 .products_main_container .filters_sidebar .category_filter_container .category_list .category_item:hover {
   border-color: #3bb77e;
@@ -1572,6 +1576,7 @@ body.no-scroll {
     padding-right: 20px;
     border: none;
     border-right: 1px solid #cacaca;
+    color: black;
     font-weight: 300;
     background-color: transparent;
     font-size: clamp(0.8125rem, 0.5739rem + 0.303vw, 0.9375rem);
