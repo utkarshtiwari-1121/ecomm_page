@@ -110,31 +110,97 @@ const minPrice = document.getElementById("minPrice");
 const range = document.getElementById("minPriceInput");
 const maxPrice = document.getElementById("maxPrice");
 const rangeMax = document.getElementById("maxPriceInput");
+const filterBtns = document.querySelectorAll(".category_item");
+const productCards = document.querySelectorAll(".popular_products_cards");
+
+// range.addEventListener("input", () => {
+//   minPrice.textContent = range.value;
+//   filterByPrice();
+// });
+
+// rangeMax.addEventListener("input", () => {
+//   maxPrice.textContent = rangeMax.value;
+//   filterByPrice();
+// });
+
+// function filterByPrice() {
+//   const minPrice = Number(range.value);
+//   const maxPrice = Number(rangeMax.value);
+
+//   productCards.forEach((card) => {
+//     const cardPrice = Number(card.dataset.price);
+
+//     if (cardPrice >= minPrice && cardPrice <= maxPrice) {
+//       card.style.display = "block";
+//     } else {
+//       card.style.display = "none";
+//     }
+//   });
+// }
+
+// Combined filter function - checks BOTH category and price together
+function applyFilters() {
+  const minPriceVal = Number(range.value);
+  const maxPriceVal = Number(rangeMax.value);
+
+  const activeFilters = [...filterBtns]
+    .filter((b) => b.classList.contains("active"))
+    .map((b) => b.dataset.filter);
+
+  productCards.forEach((card) => {
+    if (!card.dataset.tags || !card.dataset.price) {
+      return; // Skip cards that don't have filtering data attributes
+    }
+
+    const cardTags = card.dataset.tags.split(",");
+    const cardPrice = Number(card.dataset.price);
+
+    // Price check
+    const priceMatch = cardPrice >= minPriceVal && cardPrice <= maxPriceVal;
+
+    // Category check — if no filter selected, all pass
+    const categoryMatch =
+      activeFilters.length === 0 ||
+      activeFilters.some((filter) => cardTags.includes(filter));
+
+    // Card shows only if BOTH pass
+    card.style.display = priceMatch && categoryMatch ? "block" : "none";
+  });
+}
+
+// Initial values setup for range labels
+// minPrice.textContent = range.value;
+// maxPrice.textContent = rangeMax.value;
+// applyFilters();
 
 range.addEventListener("input", () => {
-  minPrice.textContent = range.value;
-  filterByPrice();
+  if (Number(range.value) >= Number(rangeMax.value)) {
+    range.value = rangeMax.value;
+    minPrice.textContent = range.value;
+  } else {
+    minPrice.textContent = range.value;
+  }
+
+  applyFilters();
 });
 
 rangeMax.addEventListener("input", () => {
-  maxPrice.textContent = rangeMax.value;
-  filterByPrice();
+  if (Number(rangeMax.value) <= Number(range.value)) {
+    rangeMax.value = range.value;
+    maxPrice.textContent = range.value;
+  } else {
+    maxPrice.textContent = rangeMax.value;
+  }
+
+  applyFilters();
 });
 
-function filterByPrice() {
-  const minPrice = Number(range.value);
-  const maxPrice = Number(rangeMax.value);
-
-  productCards.forEach((card) => {
-    const cardPrice = Number(card.dataset.price);
-
-    if (cardPrice >= minPrice && cardPrice <= maxPrice) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+    applyFilters();
   });
-}
+});
 
 function updateBodyScroll() {
   const menuActive = document
@@ -198,33 +264,30 @@ function filters() {
 //   filters.classList.remove("active");
 // }
 
-const filterBtns = document.querySelectorAll(".category_item");
-const productCards = document.querySelectorAll(".popular_products_cards");
+// filterBtns.forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     btn.classList.toggle("active");
 
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btn.classList.toggle("active");
+//     const activeFilters = [...filterBtns]
+//       .filter((b) => b.classList.contains("active"))
+//       .map((b) => b.dataset.filter);
 
-    const activeFilters = [...filterBtns]
-      .filter((b) => b.classList.contains("active"))
-      .map((b) => b.dataset.filter);
+//     productCards.forEach((card) => {
+//       const cardTags = card.dataset.tags.split(",");
 
-    productCards.forEach((card) => {
-      const cardTags = card.dataset.tags.split(",");
+//       if (activeFilters.length === 0) {
+//         card.style.display = "block";
+//         return;
+//       }
 
-      if (activeFilters.length === 0) {
-        card.style.display = "block";
-        return;
-      }
+//       // const hasMatch = activeFilters.every((filter) =>
+//       //   cardTags.includes(filter)
+//       // );
+//       const hasMatch = activeFilters.some((filter) =>
+//         cardTags.includes(filter),
+//       );
 
-      // const hasMatch = activeFilters.every((filter) =>
-      //   cardTags.includes(filter)
-      // );
-      const hasMatch = activeFilters.some((filter) =>
-        cardTags.includes(filter),
-      );
-
-      card.style.display = hasMatch ? "block" : "none";
-    });
-  });
-});
+//       card.style.display = hasMatch ? "block" : "none";
+//     });
+//   });
+// });
